@@ -1,0 +1,16 @@
+from twilio.rest import Client
+
+twilio_username = aliujx@gmail.com
+password = AmoErgoSum7249
+
+account_sid = 'ACc122e21170c90bce6b70249ec57b1c3b'
+auth_token = 'f2f1cbc266bfc7653c8872819d6e50e7'
+
+client = Client(account_sid, auth_token)
+    message = client.messages.create(
+    body="Hello! How are you?",
+    from_='+19793644765',
+    to='+905515945600'
+)
+
+print(message.status)

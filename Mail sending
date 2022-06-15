@@ -1,0 +1,20 @@
+import smtplib
+
+my_email = "pakatyak@gmail.com"
+password = "Na04m@j*/f"
+
+with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
+    connection.starttls()
+    result = connection.login(user=my_email, password=password)
+    connection.sendmail(
+        from_addr=my_email,
+        to_addrs='aliujx@gmail.com',
+        msg=f"Subject:Hello!\n\nThis is my mail")
+
+
+yahoo_email = "pakatyak@yahoo.com"
+Gmail: smtp.gmail.com
+Hotmail: smtp.live.com
+Outlook: outlook.office365.com
+Yahoo: smtp.mail.yahoo.com
+        
